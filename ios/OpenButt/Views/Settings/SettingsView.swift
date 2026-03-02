@@ -214,7 +214,7 @@ struct SettingsView: View {
                         Text("0.1.0")
                             .foregroundStyle(.secondary)
                     }
-                    Link("GitHub", destination: URL(string: "https://github.com/openbutt/openbutt")!)
+                    Link("GitHub", destination: URL(string: "https://github.com/christopherkmoore/OpenButt")!)
                 }
             }
             .navigationTitle(initialSetup ? "Setup" : "Settings")

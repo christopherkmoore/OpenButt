@@ -20,7 +20,7 @@ struct SessionInfo: Identifiable {
     let firstMessage: String // First user prompt (label)
     let lastTimestamp: Date
     let messageCount: Int
-    let projectDir: String  // e.g. "-home-ckm"
+    let projectDir: String  // e.g. "-home-user"
 }
 ```
 

@@ -231,8 +231,8 @@ fi
 # ---------------------------------------------------------------------------
 header "Server settings"
 
-DEFAULT_PORT=2222
-read -rp "$(printf "${BOLD}SSH port for OpenButt [${DEFAULT_PORT}]:${NC} ")" SSH_PORT
+DEFAULT_PORT=22
+read -rp "$(printf "${BOLD}SSH port [${DEFAULT_PORT}]:${NC} ")" SSH_PORT
 SSH_PORT="${SSH_PORT:-$DEFAULT_PORT}"
 
 SERVER_HOST=$(hostname)
@@ -367,9 +367,10 @@ fi
 printf "  Server:            ${CYAN}%s@%s:%s${NC}\n" "$(whoami)" "$SERVER_HOST" "$SSH_PORT"
 echo ""
 info "Next steps:"
-echo "  1. Transfer the private key to the iOS app (if newly generated)"
-echo "  2. Start the OpenButt server with: openbutt-server start"
+echo "  1. Transfer the private key to the iOS app (paste into Settings > SSH Key)"
+echo "  2. Open the app and enter this server's IP, port, and username in Settings"
+echo "  3. Tap 'Test Connection' to verify — no server process needed, the app connects via SSH"
 if ! $APNS_ENABLED; then
-    echo "  3. Run this script again to configure APNs push notifications"
+    echo "  4. (Optional) Run this script again to configure APNs push notifications"
 fi
 echo ""

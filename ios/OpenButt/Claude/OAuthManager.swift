@@ -34,7 +34,7 @@ enum OAuthManager {
     // MARK: - Constants
 
     static let tokenURL = "https://platform.claude.com/v1/oauth/token"
-    static let clientId = "9d1c250a-e61b-44d9-88ed-5944d1962f5e" // CLAUDE CHECK 
+    static let clientId = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
     static let scopes = "user:profile user:inference user:sessions:claude_code user:mcp_servers"
     static let credentialsPath = "~/.claude/.credentials.json"
 

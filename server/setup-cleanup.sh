@@ -109,7 +109,7 @@ chmod +x "$CLEANUP_SCRIPT"
 ok "Cleanup script written to $CLEANUP_SCRIPT"
 
 # ─── Install cron ─────────────────────────────────────────────────────────────
-CRON_LINE="$CRON_INTERVAL * * * * $CLEANUP_SCRIPT"
+CRON_LINE="$CRON_INTERVAL * * * $CLEANUP_SCRIPT"
 
 # Remove existing entry if present, then add fresh
 ( crontab -l 2>/dev/null | grep -v "cleanup-sessions.sh"; echo "$CRON_LINE" ) | crontab -

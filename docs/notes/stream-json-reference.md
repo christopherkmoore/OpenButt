@@ -24,7 +24,7 @@ First message on every session start:
 {
   "type": "system",
   "subtype": "init",
-  "cwd": "/home/ckm",
+  "cwd": "/home/user",
   "session_id": "794b629e-9e4d-40ec-9414-56823489c3f3",
   "tools": ["Task","Bash","Glob","Grep","Read","Edit","Write","NotebookEdit","WebFetch","WebSearch","AskUserQuestion","..."],
   "mcp_servers": [],

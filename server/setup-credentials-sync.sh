@@ -48,7 +48,7 @@ fi
 
 add_target() {
     echo ""
-    read -rp "  SSH user@host (e.g. ckm@10.0.0.250): " SERVER_ADDR
+    read -rp "  SSH user@host (e.g. user@192.168.1.100): " SERVER_ADDR
     [[ -n "$SERVER_ADDR" ]] || die "Server address required"
 
     DEFAULT_KEY="$HOME/.ssh/id_ed25519"
@@ -147,11 +147,6 @@ else
 EOF
     info "No targets configured yet. Let's add your first server."
     add_target
-fi
-
-# Keep repo copy in sync
-if [[ -f "$REPO_TARGETS" ]] || [[ -d "$SCRIPT_DIR" ]]; then
-    cp "$TARGETS_FILE" "$REPO_TARGETS" 2>/dev/null || true
 fi
 
 # ─── Write sync script ───────────────────────────────────────────────────────
